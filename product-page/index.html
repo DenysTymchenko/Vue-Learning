@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header-component :cart="cart"></header-component>
+    <product @add-to-cart="updateCart"></product>
+  </div>
+
+  <script src="./main.js"></script>
+  <script src="./components/Header.js"></script>
+  <script src="./components/Product.js"></script>
+  <script src="./components/ProductInfo.js"></script>
+  <script src="./components/ProductOptions.js"></script>
+  <script>
+    app.mount('#app')
+  </script>
+</body>
+</html>

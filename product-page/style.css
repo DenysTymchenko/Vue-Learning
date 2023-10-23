@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+
+:root {
+  --primary: #42B883;
+  --secondary: #35495E;
+  --accent: #11252B;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--accent);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 0 10px;
+}
+
+header > h3 {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+header > .cart {
+  background-color: var(--secondary);
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: -4px 4px 50px -10px var(--accent);
+}
+
+main {
+  display: flex;
+  gap: 25px;
+  padding: 45px 20px;
+}
+
+.product-img {
+  width: 50%;
+  height: 50%;
+  border: 3px solid var(--primary);
+  padding: 10px;
+}
+
+.product-name {
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.details {
+  list-style: square inside;
+}
+
+.variant {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 1px 10px 19px 2px rgba(0,0,0,0.36);
+  border-radius: 40px;
+  border: 1px solid var(--primary);
+  margin: 10px 30px 10px 0;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.variant.not-in-stock {
+  opacity: 0.3;
+}
+
+.variant:hover {
+  border-color: var(--secondary);
+}
+
+select {
+  display: block;
+  width: 285px;
+  height: 50px;
+  font-size: 1.5rem;
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  box-shadow: 1px 10px 19px 2px rgba(0,0,0,0.36);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  width: 285px;
+  height: 60px;
+  font-size: 1.5rem;
+  background-color: var(--accent);
+  border: 1px solid var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.add-to-cart:disabled {
+  opacity: 0.5;
+}
+
+.add-to-cart:not(:disabled):hover {
+  background-color: var(--primary);
+}
